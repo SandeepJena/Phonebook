@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Phonebook</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <style>
+        a:link,
+        a:hover {
+            text-decoration: none;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Phonebook</h2>
+        <form action="">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="fname">First Name:</label>
+                        <input type="fname" class="form-control" id="f_Name" placeholder="Enter First Name" name="fname"
+                            required />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="lname">Last Name:</label>
+                        <input type="lname" class="form-control" id="l_Name" placeholder="Enter Last Name" name="lname"
+                            required />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="mobile">Mobile:</label>
+                        <input type="mobile" class="form-control" id="m_No" placeholder="Enter Number" name="mobile"
+                            minlength="10" required maxlength="10">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="e_Mail" placeholder="Enter Email" name="email"
+                            required pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/">
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-default submit" onclick="my_Fun()">Submit</button>
+            <button type="button" class="btn btn-info update" onclick="update()">Update</button>
+        </form>
+        <table class="table" id="tab">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="tb">
+            </tbody>
+        </table>
+    </div>
+
+</body>
+<style>
+    .update {
+        display: none;
+    }
+</style>
+
+</html>
